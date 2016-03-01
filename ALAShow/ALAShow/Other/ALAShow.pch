@@ -1,0 +1,19 @@
+//
+//  ALAShow.pch
+//  ALAShow
+//
+//  Created by 阿拉丁 on 16/3/1.
+//  Copyright © 2016年 阿拉丁. All rights reserved.
+//
+
+#ifndef ALAShow_pch
+#define ALAShow_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "ALAShowAppDefine.h"
+#import "ALAShowNetWork.h"
+
+
+#endif /* ALAShow_pch */
