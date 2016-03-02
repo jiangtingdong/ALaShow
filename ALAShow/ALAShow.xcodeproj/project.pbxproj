@@ -22,6 +22,8 @@
 		FB6B11F01C853D4400274243 /* ALASendGoods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6B11EF1C853D4400274243 /* ALASendGoods.storyboard */; };
 		FB954A731C858EF800C627A2 /* ALANewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB954A721C858EF800C627A2 /* ALANewFeatureCell.m */; };
 		FBF559D71C868A94000020CB /* ALANewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF559D61C868A94000020CB /* ALANewFeatureVC.m */; };
+		FBF559E01C86C519000020CB /* ALAHotTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF559DF1C86C519000020CB /* ALAHotTopVC.m */; };
+		FBF559E61C86E140000020CB /* ALAHotTopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF559E51C86E140000020CB /* ALAHotTopModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,10 @@
 		FB954A721C858EF800C627A2 /* ALANewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALANewFeatureCell.m; sourceTree = "<group>"; };
 		FBF559D51C868A94000020CB /* ALANewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALANewFeatureVC.h; sourceTree = "<group>"; };
 		FBF559D61C868A94000020CB /* ALANewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALANewFeatureVC.m; sourceTree = "<group>"; };
+		FBF559DE1C86C519000020CB /* ALAHotTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAHotTopVC.h; sourceTree = "<group>"; };
+		FBF559DF1C86C519000020CB /* ALAHotTopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAHotTopVC.m; sourceTree = "<group>"; };
+		FBF559E41C86E140000020CB /* ALAHotTopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAHotTopModel.h; sourceTree = "<group>"; };
+		FBF559E51C86E140000020CB /* ALAHotTopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAHotTopModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,8 @@
 		FB6B11DE1C853CEA00274243 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FBF559DE1C86C519000020CB /* ALAHotTopVC.h */,
+				FBF559DF1C86C519000020CB /* ALAHotTopVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +257,8 @@
 		FB6B11DF1C853CEA00274243 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FBF559E41C86E140000020CB /* ALAHotTopModel.h */,
+				FBF559E51C86E140000020CB /* ALAHotTopModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -569,7 +579,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF559E61C86E140000020CB /* ALAHotTopModel.m in Sources */,
 				FB6B11D81C853ADB00274243 /* ALAMainNavgationController.m in Sources */,
+				FBF559E01C86C519000020CB /* ALAHotTopVC.m in Sources */,
 				FB6B11CE1C85342300274243 /* main.m in Sources */,
 				FB954A731C858EF800C627A2 /* ALANewFeatureCell.m in Sources */,
 				FB6B11951C8529D200274243 /* AppDelegate.m in Sources */,

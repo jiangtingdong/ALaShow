@@ -16,12 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstView2" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-KE-DHG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wbc-KE-DHG" secondAttribute="trailing" id="69n-8q-qae"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="wbc-KE-DHG" secondAttribute="bottom" id="GGF-LP-cHE"/>
+                            <constraint firstItem="wbc-KE-DHG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="QlY-Ee-MYF"/>
+                            <constraint firstItem="wbc-KE-DHG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rR7-X4-2ez"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="338" y="373"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="firstView2" width="375" height="667"/>
+    </resources>
 </document>
