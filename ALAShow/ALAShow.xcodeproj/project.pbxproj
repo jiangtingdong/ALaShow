@@ -20,6 +20,8 @@
 		FB6B11EC1C853D1B00274243 /* ALAHotTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6B11EB1C853D1B00274243 /* ALAHotTop.storyboard */; };
 		FB6B11EE1C853D3500274243 /* ALAMyCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6B11ED1C853D3500274243 /* ALAMyCenter.storyboard */; };
 		FB6B11F01C853D4400274243 /* ALASendGoods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6B11EF1C853D4400274243 /* ALASendGoods.storyboard */; };
+		FB954A731C858EF800C627A2 /* ALANewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB954A721C858EF800C627A2 /* ALANewFeatureCell.m */; };
+		FBF559D71C868A94000020CB /* ALANewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF559D61C868A94000020CB /* ALANewFeatureVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		FB6B11EB1C853D1B00274243 /* ALAHotTop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ALAHotTop.storyboard; sourceTree = "<group>"; };
 		FB6B11ED1C853D3500274243 /* ALAMyCenter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ALAMyCenter.storyboard; sourceTree = "<group>"; };
 		FB6B11EF1C853D4400274243 /* ALASendGoods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ALASendGoods.storyboard; sourceTree = "<group>"; };
+		FB954A711C858EF800C627A2 /* ALANewFeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALANewFeatureCell.h; sourceTree = "<group>"; };
+		FB954A721C858EF800C627A2 /* ALANewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALANewFeatureCell.m; sourceTree = "<group>"; };
+		FBF559D51C868A94000020CB /* ALANewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALANewFeatureVC.h; sourceTree = "<group>"; };
+		FBF559D61C868A94000020CB /* ALANewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALANewFeatureVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 		FB6B11C71C85342300274243 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB954A601C85810E00C627A2 /* NewFeature */,
 				FB6B11DC1C853CEA00274243 /* HotTop */,
 				FB6B11E11C853CEA00274243 /* MyCenter */,
 				FB6B11E61C853CEA00274243 /* SendGoods */,
@@ -330,6 +337,49 @@
 			isa = PBXGroup;
 			children = (
 				FB6B11EF1C853D4400274243 /* ALASendGoods.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB954A601C85810E00C627A2 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				FB954A671C8582F600C627A2 /* Cells */,
+				FB954A681C8582F600C627A2 /* Controllers */,
+				FB954A6B1C8582F600C627A2 /* Models */,
+				FB954A6C1C8582F600C627A2 /* Views */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		FB954A671C8582F600C627A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB954A711C858EF800C627A2 /* ALANewFeatureCell.h */,
+				FB954A721C858EF800C627A2 /* ALANewFeatureCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FB954A681C8582F600C627A2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBF559D51C868A94000020CB /* ALANewFeatureVC.h */,
+				FBF559D61C868A94000020CB /* ALANewFeatureVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB954A6B1C8582F600C627A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB954A6C1C8582F600C627A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -521,8 +571,10 @@
 			files = (
 				FB6B11D81C853ADB00274243 /* ALAMainNavgationController.m in Sources */,
 				FB6B11CE1C85342300274243 /* main.m in Sources */,
+				FB954A731C858EF800C627A2 /* ALANewFeatureCell.m in Sources */,
 				FB6B11951C8529D200274243 /* AppDelegate.m in Sources */,
 				FB6B11DB1C853B0500274243 /* ALAMainTabBarController.m in Sources */,
+				FBF559D71C868A94000020CB /* ALANewFeatureVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
