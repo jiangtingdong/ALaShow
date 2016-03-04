@@ -10,8 +10,29 @@
 
 @implementation ALAHotTopModel
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict
+{
+    if (self = [super init]) {
+        [self setValuesForKeysWithDictionary:dict];
+    }
+    return self;
+}
+
++ (instancetype)hotTopWithDictionary:(NSDictionary *)dict
+{
+    return [[self alloc] initWithDictionary:dict];
+}
 
 
++ (NSMutableArray *)hotTopModelFromDictionaryArray:(NSArray *)dictArray
+{
+    NSMutableArray *tempArray = [NSMutableArray array];
+    for (NSDictionary *dict in dictArray) {
+        ALAHotTopModel *model = [self hotTopWithDictionary:dict];
+        [tempArray addObject:model];
+    }
+    return tempArray.copy;
+}
 
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key

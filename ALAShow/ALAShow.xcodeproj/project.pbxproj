@@ -21,6 +21,9 @@
 		FB6B11EE1C853D3500274243 /* ALAMyCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6B11ED1C853D3500274243 /* ALAMyCenter.storyboard */; };
 		FB6B11F01C853D4400274243 /* ALASendGoods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6B11EF1C853D4400274243 /* ALASendGoods.storyboard */; };
 		FB954A731C858EF800C627A2 /* ALANewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB954A721C858EF800C627A2 /* ALANewFeatureCell.m */; };
+		FBF21E381C87CE8C00E06C90 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF21E371C87CE8C00E06C90 /* NSArray+Log.m */; };
+		FBF21E3B1C87D6D200E06C90 /* ALAHotTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF21E3A1C87D6D200E06C90 /* ALAHotTopCell.m */; };
+		FBF21E3E1C88167700E06C90 /* ALAHotTopFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF21E3D1C88167700E06C90 /* ALAHotTopFlowLayout.m */; };
 		FBF559D71C868A94000020CB /* ALANewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF559D61C868A94000020CB /* ALANewFeatureVC.m */; };
 		FBF559E01C86C519000020CB /* ALAHotTopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF559DF1C86C519000020CB /* ALAHotTopVC.m */; };
 		FBF559E61C86E140000020CB /* ALAHotTopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF559E51C86E140000020CB /* ALAHotTopModel.m */; };
@@ -72,6 +75,12 @@
 		FB6B11EF1C853D4400274243 /* ALASendGoods.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ALASendGoods.storyboard; sourceTree = "<group>"; };
 		FB954A711C858EF800C627A2 /* ALANewFeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALANewFeatureCell.h; sourceTree = "<group>"; };
 		FB954A721C858EF800C627A2 /* ALANewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALANewFeatureCell.m; sourceTree = "<group>"; };
+		FBF21E361C87CE8C00E06C90 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		FBF21E371C87CE8C00E06C90 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		FBF21E391C87D6D200E06C90 /* ALAHotTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAHotTopCell.h; sourceTree = "<group>"; };
+		FBF21E3A1C87D6D200E06C90 /* ALAHotTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAHotTopCell.m; sourceTree = "<group>"; };
+		FBF21E3C1C88167700E06C90 /* ALAHotTopFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAHotTopFlowLayout.h; sourceTree = "<group>"; };
+		FBF21E3D1C88167700E06C90 /* ALAHotTopFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAHotTopFlowLayout.m; sourceTree = "<group>"; };
 		FBF559D51C868A94000020CB /* ALANewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALANewFeatureVC.h; sourceTree = "<group>"; };
 		FBF559D61C868A94000020CB /* ALANewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALANewFeatureVC.m; sourceTree = "<group>"; };
 		FBF559DE1C86C519000020CB /* ALAHotTopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAHotTopVC.h; sourceTree = "<group>"; };
@@ -152,6 +161,7 @@
 				FB6B11C71C85342300274243 /* Controllers */,
 				FB6B11C81C85342300274243 /* Libs */,
 				FB6B11C91C85342300274243 /* Maco */,
+				FBF21E321C87CCC100E06C90 /* Unit */,
 				FB6B11CA1C85342300274243 /* Other */,
 				FB6B11931C8529D200274243 /* AppDelegate.h */,
 				FB6B11941C8529D200274243 /* AppDelegate.m */,
@@ -241,6 +251,10 @@
 		FB6B11DD1C853CEA00274243 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FBF21E391C87D6D200E06C90 /* ALAHotTopCell.h */,
+				FBF21E3A1C87D6D200E06C90 /* ALAHotTopCell.m */,
+				FBF21E3C1C88167700E06C90 /* ALAHotTopFlowLayout.h */,
+				FBF21E3D1C88167700E06C90 /* ALAHotTopFlowLayout.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -392,6 +406,15 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FBF21E321C87CCC100E06C90 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				FBF21E361C87CE8C00E06C90 /* NSArray+Log.h */,
+				FBF21E371C87CE8C00E06C90 /* NSArray+Log.m */,
+			);
+			path = Unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,11 +602,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF21E381C87CE8C00E06C90 /* NSArray+Log.m in Sources */,
+				FBF21E3E1C88167700E06C90 /* ALAHotTopFlowLayout.m in Sources */,
 				FBF559E61C86E140000020CB /* ALAHotTopModel.m in Sources */,
 				FB6B11D81C853ADB00274243 /* ALAMainNavgationController.m in Sources */,
 				FBF559E01C86C519000020CB /* ALAHotTopVC.m in Sources */,
 				FB6B11CE1C85342300274243 /* main.m in Sources */,
 				FB954A731C858EF800C627A2 /* ALANewFeatureCell.m in Sources */,
+				FBF21E3B1C87D6D200E06C90 /* ALAHotTopCell.m in Sources */,
 				FB6B11951C8529D200274243 /* AppDelegate.m in Sources */,
 				FB6B11DB1C853B0500274243 /* ALAMainTabBarController.m in Sources */,
 				FBF559D71C868A94000020CB /* ALANewFeatureVC.m in Sources */,

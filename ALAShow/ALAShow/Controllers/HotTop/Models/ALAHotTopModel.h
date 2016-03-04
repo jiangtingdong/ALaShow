@@ -23,7 +23,7 @@
  */
 @interface ALAHotTopModel : NSObject
 @property (nonatomic, assign) NSInteger commentNum;
-@property (nonatomic, copy)   NSString *imageUrl;
+@property (nonatomic, copy)   NSString *imgUrl;
 @property (nonatomic, assign) NSInteger goodsId;
 @property (nonatomic, assign) NSInteger height;
 @property (nonatomic, copy)   NSString *publishTime;
@@ -35,5 +35,7 @@
 @property (nonatomic, assign) NSInteger upvoteNum;
 @property (nonatomic, copy)   NSString *shareContent;
 
-
+- (instancetype)initWithDictionary:(NSDictionary*)dict;
++ (instancetype)hotTopWithDictionary:(NSDictionary *)dict;
++ (NSMutableArray *)hotTopModelFromDictionaryArray:(NSArray *)dictArray;
 @end

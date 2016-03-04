@@ -6,11 +6,19 @@
 //  Copyright © 2016年 阿拉丁. All rights reserved.
 //
 
+
+#import "ALAHotTopCell.h"
+#import "ALAHotTopModel.h"
 #import "ALAHotTopVC.h"
+#import <AFNetworking.h>
+#import "ALAHotTopFlowLayout.h"
+
 
 @interface ALAHotTopVC ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *showGoodsCV;
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *showGoodsLayout;
+@property (weak, nonatomic) IBOutlet ALAHotTopFlowLayout *showGoodsLayout;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, copy) NSString *imgPath;
 
 @end
 static NSString *reuseID  = @"ALAShowGoodsCell";
@@ -18,34 +26,51 @@ static NSString *reuseID  = @"ALAShowGoodsCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.showGoodsCV.backgroundColor = [UIColor whiteColor];
+    self.showGoodsLayout.columnCount = 2;
+    self.showGoodsLayout.sectionInset = UIEdgeInsetsMake(10, 10, 0, 10);
+    [self  handleData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)handleData
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager POST:[NSString stringWithFormat:@"http://183.131.19.225/miyu/portal/portal.do?pageIndex=%zd&&pageSize=%zd",1,10] parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+        NSDictionary *data = [responseObject objectForKey:@"data"];
+        self.imgPath = [data objectForKey:@"imgPath"];
+        self.dataArray = [ALAHotTopModel hotTopModelFromDictionaryArray:[data objectForKey:@"showList"]];
+        self.showGoodsLayout.dataList = self.dataArray;
+        [self.showGoodsCV reloadData];
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"加载失败");
+    }];
 }
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataArray.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseID forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithRed:random()%255/255.0 green:random()%255/255.0 blue:random()%255/255.0 alpha:1];
+    ALAHotTopCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseID forIndexPath:indexPath];
+    cell.model = self.dataArray[indexPath.item];
+    cell.imgPath = self.imgPath;
     return cell;
 }
 
-- (UICollectionViewFlowLayout *)showGoodsLayout
+
+- (NSMutableArray *)dataArray
 {
-    if (!_showGoodsLayout) {
-        _showGoodsLayout.minimumLineSpacing = 20;
-        _showGoodsLayout.minimumInteritemSpacing = 40;
-        
+    if (!_dataArray) {
+        _dataArray = [[NSMutableArray alloc] init];
     }
-    return _showGoodsLayout;
+    return _dataArray;
 }
 @end

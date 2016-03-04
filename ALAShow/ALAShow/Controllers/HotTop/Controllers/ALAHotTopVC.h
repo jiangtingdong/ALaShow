@@ -10,4 +10,5 @@
 
 @interface ALAHotTopVC : UIViewController
 
+
 @end
